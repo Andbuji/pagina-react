@@ -40,17 +40,17 @@ function App() {
             src="https://cdn.discordapp.com/attachments/1159212210090942469/1231734881743015986/pet-adoption-with-cute-little-kitten-vector.png?ex=66380980&is=66259480&hm=9896c0f786652b1da31c80c99f7e803525354539f35f72187cb9e13449541f5c&"
             alt="Gato para adoptar"
             className="img-fluid rounded mb-3"
-            style={{width: 300}}
+            style={{ width: 300 }}
           />
         </div>
         <div className="col-md-6">
-          <p className="font-italic">
+          <p className="font-italic parrafo1">
             En nuestro refugio tenemos una variedad de gatos de todas las
             edades, tamaños y personalidades esperando encontrar un hogar
             amoroso. Todos nuestros gatos están esterilizados, vacunados y en
             busca de un nuevo comienzo.
           </p>
-          <p className="mb-4">
+          <p className="parrafo2 mb-4">
             Para obtener más información sobre cómo adoptar uno de nuestros
             gatos, por favor contáctanos al siguiente número:
           </p>
@@ -64,26 +64,26 @@ function App() {
     <div className="App">
       <header className="App-header bg-warning-subtle text-dark">
         <div className="container">
-          <h1>Bienvenido a la página de Gatos</h1>
+          <h1>Bienvenido a Patitas Suaves</h1>
           <p>¡Aquí puedes encontrar información sobre diferentes gatos!</p>
         </div>
       </header>
       <main className="container mt-4">
         <div className="row">
           <div className="col-md-6">
-          <div className="bg-light p-4 rounded">
-            <h2 className="text-darkbrown mb-4">Nuestros Gatos</h2>
-          </div>
+            <div className="bg-light p-4 rounded mb-4">
+              <h2 className="text-darkbrown mb-4">Nuestros Gatos</h2>
+            </div>
             <div className="card-deck">
               {gatos.map((gato) => (
                 <div key={gato.id} className="card mb-3">
+                  <h5 className="card-title">{gato.nombre}</h5>
                   <img
                     src={gato.imagen}
                     alt={gato.nombre}
                     className="card-img-top img-fluid"
                   />
-                  <div className="card-body">
-                    <h5 className="card-title">{gato.nombre}</h5>
+                  <div className="card-body">        
                     <p className="card-text">Edad: {gato.edad} años</p>
                     <p className="card-text">{gato.descripcion}</p>
                   </div>
@@ -95,6 +95,21 @@ function App() {
             <div className="bg-light p-4 rounded">
               {adoptaGatoContenido}
             </div>
+
+            <div className="card-deck mt-4">
+                <div className="card mb-3">
+                  <h5 className="card-title">Noa</h5>
+                  <img
+                    src="https://cdn.discordapp.com/attachments/1159212210090942469/1231761130523852881/WhatsApp_Image_2024-04-21_at_7.18.03_PM.jpeg?ex=663821f2&is=6625acf2&hm=a84e0d277a0d4c2a54bf8c89e1afdaa42dc82c7be6dc8a067bc2540ae02a54d7&"
+                    alt='Noa'
+                    className="card-img-top img-fluid"
+                  />
+                  <div className="card-body">        
+                    <p className="card-text">Edad: 3 años</p>
+                    <p className="card-text">Una gatita con mirada seria pero es muy juguetona, le encanta jugar con otras mascotas</p>
+                  </div>
+                </div>
+            </div>     
           </div>
         </div>
       </main>
